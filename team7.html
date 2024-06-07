@@ -131,9 +131,7 @@
                 { domanda: "Domanda 10: ...", rispostaCorretta: "risposta10", immagine: "immagine10.png" }
             ];
 
-            const urlParams = new URLSearchParams(window.location.search);
-            const squadra = parseInt(urlParams.get('team')) || 1; // Default to team 1 if no parameter
-            //const squadra = 1; // Ad esempio, qui imposti la squadra corrente (da 1 a 7)
+            const squadra = 7; // Ad esempio, qui imposti la squadra corrente (da 1 a 7)
             const domandeContainer = document.getElementById("domande-container");
             const timbroContainer = document.getElementById("timbro-container");
 
