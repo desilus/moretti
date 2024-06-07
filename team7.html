@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Squadre</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url('sfondo.jpg') no-repeat center center;
+            background-color: #ad9d9d;
+            text-align: center;
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            gap: 20px;
+        }
+
+        h1 {
+            margin-top: 20px;
+        }
+
+        #questionario {
+            display: grid;
+            grid-template-rows: 1fr auto;
+            
+            gap: 20px;
+            width: 80%;
+            max-width: 600px;
+            margin: 0 auto;
+            border: 1px solid #f00f0f;
+        }
+
+        #domande-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        .domanda, .pagina {
+            display: none;
+            background-size: cover;
+            padding: 20px;
+            border: 1px solid #f00f0f;
+            position: relative;
+            min-height: 200px;
+        }
+
+        .domanda.active, .pagina.active {
+            display: block;
+        }
+
+        #timbro-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #f00f0f;
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        #timbro-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        @keyframes timbroAnim {
+            0% { transform: scale(2) rotate(0deg); opacity: 0; }
+            50% { transform: scale(1) rotate(360deg); opacity: 1; }
+            100% { transform: scale(1) rotate(360deg); opacity: 1; }
+        }
+
+        .timbro {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background: url('timbro.png') no-repeat center center;
+            background-size: contain;
+            animation: timbroAnim 1s forwards;
+            opacity: 0;
+            display: none;
+        }
+
+        .bello {
+            border-radius: 5px;
+            background-color: #f00f0f;
+            
+            margin: auto;
+            margin-bottom: 1rem;
+        }
+
+        .yellow {
+            background-color: #f00f0f;
+        }
+    </style>
+</head>
+<body>
+    <h1>Questionario Squadre</h1>
+    <form id="questionario">
+        <div id="domande-container">
+            <div class="pagina active" id="pagina-benvenuto">
+                <h2>Benvenuto al Questionario Squadre!</h2>
+                <p>Premi "Avanti" per iniziare.</p>
+            </div>
+            <!-- Domande dinamiche verranno inserite qui -->
+            <div class="pagina" id="pagina-commiato">
+                <h2>Grazie per aver partecipato!</h2>
+                <p>Hai completato il questionario. Ricchi premi e cotillon.</p>
+                <img src="14539eu.png" alt="Immagine Commiato" style="max-width: 100%; height: auto;">
+            </div>
+        </div>
+        <!--<button type="submit" id="submit-button" style="display:none;">Invia Risposte</button>-->
+        <div id="timbro-container"></div>
+        <button type="button" class="bello" id="next-button">Avanti</button>
+    </form>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const domande = [
+                { domanda: "Domanda 1: ...", rispostaCorretta: "risposta1", immagine: "immagine1.png" },
+                { domanda: "Domanda 2: ...", rispostaCorretta: "risposta2", immagine: "immagine2.png" },
+                { domanda: "Domanda 3: ...", rispostaCorretta: "risposta3", immagine: "immagine3.png" },
+                { domanda: "Domanda 4: ...", rispostaCorretta: "risposta4", immagine: "immagine4.png" },
+                { domanda: "Domanda 5: ...", rispostaCorretta: "risposta5", immagine: "immagine5.png" },
+                { domanda: "Domanda 6: ...", rispostaCorretta: "risposta6", immagine: "immagine6.png" },
+                { domanda: "Domanda 7: ...", rispostaCorretta: "risposta7", immagine: "immagine7.png" },
+                { domanda: "Domanda 8: ...", rispostaCorretta: "risposta8", immagine: "immagine8.png" },
+                { domanda: "Domanda 9: ...", rispostaCorretta: "risposta9", immagine: "immagine9.png" },
+                { domanda: "Domanda 10: ...", rispostaCorretta: "risposta10", immagine: "immagine10.png" }
+            ];
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const squadra = parseInt(urlParams.get('team')) || 1; // Default to team 1 if no parameter
+            //const squadra = 1; // Ad esempio, qui imposti la squadra corrente (da 1 a 7)
+            const domandeContainer = document.getElementById("domande-container");
+            const timbroContainer = document.getElementById("timbro-container");
+
+            function getDomandePerSquadra(domande, squadra) {
+                const start = (squadra - 1) % domande.length;
+                const orderedQuestions = [];
+
+                for (let i = 0; i < domande.length; i++) {
+                    orderedQuestions.push(domande[(start + i) % domande.length]);
+                }
+
+                return orderedQuestions;
+            }
+
+            const domandePerSquadra = getDomandePerSquadra(domande, squadra);
+            let currentIndex = 0;
+
+            domandePerSquadra.forEach((domandaObj, index) => {
+                const div = document.createElement("div");
+                div.className = "domanda";
+                div.innerHTML = `
+                    <label for="domanda${index + 1}">${domandaObj.domanda}</label>
+                    <div></div>
+                    <input type="text" class="yellow" id="domanda${index + 1}" name="domanda${index + 1}">
+                `;
+                domandeContainer.insertBefore(div, document.getElementById("pagina-commiato"));
+            });
+
+            function mostraProssimaDomanda() {
+                const activeDiv = document.querySelector(".domanda.active, .pagina.active");
+                const isPagina = activeDiv.classList.contains("pagina");
+
+                if (isPagina) {
+                    activeDiv.classList.remove("active");
+                    currentIndex++;
+                    const nextDiv = document.querySelectorAll(".domanda, .pagina")[currentIndex];
+                    nextDiv.classList.add("active");
+                } else {
+                    const input = activeDiv.querySelector("input");
+                    const risposta = input.value.trim();
+                    const rispostaCorretta = domandePerSquadra[currentIndex - 1].rispostaCorretta;
+                    const immagine = domandePerSquadra[currentIndex - 1].immagine;
+
+                    if (risposta.toLowerCase() === rispostaCorretta.toLowerCase()) {
+                        // Cambia lo sfondo del timbro-container
+                        timbroContainer.innerHTML = `<img src="${immagine}" alt="Immagine Domanda">`;
+
+                        const timbro = document.createElement('div');
+                        timbro.className = 'timbro';
+                        timbroContainer.appendChild(timbro);
+
+                        timbro.style.display = 'block';
+
+                        setTimeout(() => {
+                            timbro.style.display = 'none';
+                            timbroContainer.innerHTML = '';
+                            activeDiv.classList.remove("active");
+                            currentIndex++;
+                            const nextDiv = document.querySelectorAll(".domanda, .pagina")[currentIndex];
+                            nextDiv.classList.add("active");
+                            if (nextDiv.classList.contains("domanda")) {
+                                nextDiv.querySelector("input").focus(); // Focus sul campo della prossima domanda
+                            } else if (nextDiv.id === "pagina-commiato") {
+                                document.getElementById("next-button").style.display = "none";
+                                document.getElementById("submit-button").style.display = "block";
+                            }
+                        }, 1000); // Attendere 1 secondo per la durata dell'animazione
+                    } else {
+                        alert("Risposta errata. Riprova.");
+                    }
+                }
+            }
+
+            document.getElementById("next-button").addEventListener("click", mostraProssimaDomanda);
+
+            document.querySelectorAll(".domanda input").forEach(input => {
+                input.addEventListener("keypress", function(event) {
+                    if (event.key === "Enter") {
+                        event.preventDefault(); // Prevenire il comportamento di default del tasto Enter
+                        mostraProssimaDomanda();
+                    }
+                });
+            });
+
+            document.getElementById("questionario").addEventListener("submit", function(event) {
+                event.preventDefault(); // Prevenire il comportamento di default del submit
+                // Qui puoi aggiungere la logica per gestire l'invio finale delle risposte
+                alert("Risposte inviate con successo!");
+            });
+        });
+    </script>
+</body>
+</html>
