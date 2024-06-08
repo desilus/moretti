@@ -1,15 +1,15 @@
 document.addEventListener("DOMContentLoaded", function() {
     const domande = [
-        { domanda: "Indicazioni tappa 1", rispostaCorretta: "risposta1", immagine: "/immagini/immagine1.png" },
-        { domanda: "Indicazioni tappa 2: ...", rispostaCorretta: "risposta2", immagine: "/immagini/immagine2.png" },
-        { domanda: "Indicazioni tappa 3: ...", rispostaCorretta: "risposta3", immagine: "/immagini/immagine3.png" },
-        { domanda: "Indicazioni tappa 4: ...", rispostaCorretta: "risposta4", immagine: "/immagini/immagine4.png" },
-        { domanda: "Indicazioni tappa 5: ...", rispostaCorretta: "risposta5", immagine: "/immagini/immagine5.png" },
-        { domanda: "Indicazioni tappa 6: ...", rispostaCorretta: "risposta6", immagine: "/immagini/immagine6.png" },
-        { domanda: "Indicazioni tappa 7: ...", rispostaCorretta: "risposta7", immagine: "/immagini/immagine7.png" },
-        { domanda: "Indicazioni tappa 8: ...", rispostaCorretta: "risposta8", immagine: "/immagini/immagine8.png" },
-        { domanda: "Indicazioni tappa 9: ...", rispostaCorretta: "risposta9", immagine: "/immagini/immagine9.png" },
-        { domanda: "Indicazioni tappa 10: ...", rispostaCorretta: "risposta10", immagine: "/immagini/immagine10.png" }
+        { domanda: "Indicazioni tappa 1", rispostaCorretta: "risposta1", immagine: "immagini/immagine1.png" },
+        { domanda: "Indicazioni tappa 2: ...", rispostaCorretta: "risposta2", immagine: "immagini/immagine2.png" },
+        { domanda: "Indicazioni tappa 3: ...", rispostaCorretta: "risposta3", immagine: "immagini/immagine3.png" },
+        { domanda: "Indicazioni tappa 4: ...", rispostaCorretta: "risposta4", immagine: "immagini/immagine4.png" },
+        { domanda: "Indicazioni tappa 5: ...", rispostaCorretta: "risposta5", immagine: "immagini/immagine5.png" },
+        { domanda: "Indicazioni tappa 6: ...", rispostaCorretta: "risposta6", immagine: "immagini/immagine6.png" },
+        { domanda: "Indicazioni tappa 7: ...", rispostaCorretta: "risposta7", immagine: "immagini/immagine7.png" },
+        { domanda: "Indicazioni tappa 8: ...", rispostaCorretta: "risposta8", immagine: "immagini/immagine8.png" },
+        { domanda: "Indicazioni tappa 9: ...", rispostaCorretta: "risposta9", immagine: "immagini/immagine9.png" },
+        { domanda: "Indicazioni tappa 10: ...", rispostaCorretta: "risposta10", immagine: "immagini/immagine10.png" }
     ];
 
     const squadra = 1; // Ad esempio, qui imposti la squadra corrente (da 1 a 7)
