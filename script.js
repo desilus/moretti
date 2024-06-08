@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
     const domande = [
         { domanda: "Indicazioni tappa 1", rispostaCorretta: "risposta1", immagine: "immagini/immagine1.png" },
-        { domanda: "Indicazioni tappa 2: ...", rispostaCorretta: "risposta2", immagine: "tree/main/immagini/immagine2.png" },
+        { domanda: "Indicazioni tappa 2: ...", rispostaCorretta: "risposta2", immagine: "immagini/immagine2.png" },
         { domanda: "Indicazioni tappa 3: ...", rispostaCorretta: "risposta3", immagine: "immagini/immagine3.png" },
         { domanda: "Indicazioni tappa 4: ...", rispostaCorretta: "risposta4", immagine: "immagini/immagine4.png" },
         { domanda: "Indicazioni tappa 5: ...", rispostaCorretta: "risposta5", immagine: "immagini/immagine5.png" },
