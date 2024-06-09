@@ -44,6 +44,9 @@ header .logo, footer .logo {
     margin-right: 25px;
     
 }
+.spazioIndicazione {
+    padding: 10px;
+}
 
 header h1, footer h1 {
     margin: 0;

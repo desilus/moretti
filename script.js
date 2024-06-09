@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
     const domande = [
-        { domanda: "Indicazioni tappa 1", rispostaCorretta: "risposta1", immagine: "immagini/immagine1.png" },
+        { domanda: "Indicazioni tappa 1: ...", rispostaCorretta: "risposta1", immagine: "immagini/immagine1.png" },
         { domanda: "Indicazioni tappa 2: ...", rispostaCorretta: "risposta2", immagine: "immagini/immagine2.png" },
         { domanda: "Indicazioni tappa 3: ...", rispostaCorretta: "risposta3", immagine: "immagini/immagine3.png" },
         { domanda: "Indicazioni tappa 4: ...", rispostaCorretta: "risposta4", immagine: "immagini/immagine4.png" },
@@ -12,7 +12,8 @@ document.addEventListener("DOMContentLoaded", function() {
         { domanda: "Indicazioni tappa 10: ...", rispostaCorretta: "risposta10", immagine: "immagini/immagine10.png" }
     ];
 
-    const squadra = 1; // Ad esempio, qui imposti la squadra corrente (da 1 a 7)
+    const squadra = parseInt(document.body.getAttribute('data-squadra'), 10); // Legge il valore di data-squadra dall'elemento body
+    //const squadra = 1; // Ad esempio, qui imposti la squadra corrente (da 1 a 7)
     const domandeContainer = document.getElementById("domande-container");
     const timbroContainer = document.getElementById("timbro-container");
     const progressBar = document.getElementById("progress-bar");
@@ -37,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function() {
         div.className = "domanda";
         div.innerHTML = `
             <label for="domanda${index + 1}">${domandaObj.domanda}</label>
-            <div class="cici"></div>
+            <div class="spazioIndicazione"></div>
             <input type="text" class="domandaDinamica" id="domanda${index + 1}" name="domanda${index + 1}">
         `;
         domandeContainer.insertBefore(div, document.getElementById("pagina-commiato"));
