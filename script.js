@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     const nextDiv = document.querySelectorAll(".domanda, .pagina")[currentIndex];
                     nextDiv.classList.add("active");
                     if (nextDiv.classList.contains("domanda")) {
-                        nextDiv.querySelector("input").focus(); // Focus sul campo della prossima domanda
+                        //nextDiv.querySelector("input").focus(); // Focus sul campo della prossima domanda
                         // Aggiorna l'immagine nel timbroContainer in bianco e nero
                         timbroContainer.innerHTML = `<img src="${domandePerSquadra[currentIndex - 1].immagine}" alt="Immagine Domanda" class="bnw">`;
                     } else {
