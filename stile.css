@@ -1,59 +1,21 @@
+/* Impostazione generale per il box-sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Stili generali */
 body {
-    
     margin: 0;
     font-family: Arial, sans-serif;
-    /*background: url('sfondo.png') no-repeat center center;*/
     background-color: #e6e7d9;
     text-align: center;
     display: grid;
     grid-template-rows: auto 1fr auto;
     gap: 20px;
     height: 100vh;
-    box-sizing: border-box;
-    
 }
-h1 {
-    font-size: 1rem;
-}
-
-header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #fff;
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-}
-
-header .logo {
-    max-width: 150px;
-    max-height: 80px;
-    margin-right: 20px;
-}
-
-header h1 {
-    margin: 0;
-}
-
-footer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #fff;
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-}
-
-footer .logo {
-    max-width: 150px;
-    max-height: 20px;
-    margin-right: 20px;
-}
-
-
-/* Stile per l'immagine in bianco e nero */
 .bnw {
     filter: grayscale(80%);
     transition: filter 1s;
@@ -64,12 +26,30 @@ footer .logo {
     filter: grayscale(0%);
     transition: filter 1s;
 }
-img {
-    width: 100%; /* Mantiene l'immagine all'interno del contenitore */
-    height: auto; /* Mantiene le proporzioni */
-    object-fit: contain; /* Assicura che l'immagine sia contenuta nel contenitore */
+
+/* Stili per header e footer */
+header, footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 }
 
+header .logo, footer .logo {
+    max-width: 150px;
+    max-height: 80px;
+    margin-right: 25px;
+    
+}
+
+header h1, footer h1 {
+    margin: 0;
+}
+
+/* Stili per il form */
 #questionario {
     display: grid;
     grid-template-rows: 1fr auto;
@@ -88,34 +68,47 @@ img {
     grid-template-columns: 1fr;
     gap: 20px;
 }
+.domandaDinamica {
+    
+    border-radius: 5px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    background-color: #d1cdd6;
+    font-size: 1rem;
+}
 
 .domanda, .pagina {
     display: none;
     background-size: cover;
     padding: 20px;
-    
     position: relative;
     min-height: 200px;
     border-radius: 10px;
     box-shadow: 0 16px 16px rgba(0, 0, 0, 0.1);
-    /*mettere4px16px per avere i bordi anche in alto*/
 }
 
 .domanda.active, .pagina.active {
     display: block;
-    /*border-radius: 10px;
-    
-    padding: 5px; */
 }
-.progress-container {
-    
+
+.bottone {
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #585c5e;
     width: 100%;
+    color: #fff;
+    max-width: 200px;
+    margin: auto;
+    margin-bottom: 1rem;
+}
+
+.progress-container {
+    width: 200px;
     background-color: #f3f3f3;
     border: 1px solid #ccc;
     border-radius: 5px;
     overflow: hidden;
     height: 20px;
-    margin-top: 5px;
+    margin-top: 2px;
 }
 
 .progress-bar {
@@ -125,9 +118,7 @@ img {
     transition: width 0.4s ease;
 }
 
-
-
-
+/* Stili per il timbro */
 #timbro-container {
     display: flex;
     justify-content: center;
@@ -135,8 +126,7 @@ img {
     width: 100%;
     height: 100%;
     margin: 0 auto;
-    overflow: hidden;  
-
+    overflow: hidden;
 }
 
 #timbro-container img {
@@ -162,28 +152,25 @@ img {
     display: none;
 }
 
-.bottone {
-    border-radius: 5px;
-    padding: 4px;
-    background-color: #585c5e;
-    max-width: 200px;
-    margin: auto;
-    margin-bottom: 1rem;
-    color: #fff;
+/* Stili per tablet */
+@media (max-width: 768px) {
+    header, footer {
+        
+        padding: 5px;
+    }
+
+    header .logo, footer .logo {
+        max-width: 120px;
+        max-height: 60px;
+        margin-bottom: 10px;
+    }
+
+    .bottone {
+        width: 90%;
+    }
 }
 
-.domandaDinamica {
-    
-    border-radius: 5px;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-    background-color: #d1cdd6;
-    font-size: 1rem;
-}
-
-.cici {
-    padding: 10px;
-}
-
+/* Stili per smartphone */
 @media (max-width: 480px) {
     body {
         grid-template-rows: auto 1fr auto;
@@ -197,6 +184,8 @@ img {
     header .logo, footer .logo {
         max-width: 100px;
         max-height: 50px;
+        margin-right: 25px;
+        margin-bottom: 0px; 
     }
 
     .bottone {
@@ -213,5 +202,8 @@ img {
         width: 100%;
         max-width: none;
         padding: 5px;
+    }
+    h1 {
+        font-size: 1rem;
     }
 }
