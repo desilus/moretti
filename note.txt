@@ -1,0 +1,16 @@
+scriptOgSenzaLocalStorage funziona correttamente, se l'utente però chiude e riavvia la pagina riparte da 0
+script.js invece ha questa funzionalità, se l'utente chiude riparte da dove ha lasciato
+
+
+Inserire questa riga al posto dell'indicazione domande per visualizzare immagini al posto del testo in script js
+<div class="amb"><img src="${domandaObj.domanda}" alt="Indicazione Tappa ${index + 1}"></div>
+
+
+aggiungere lo stile in css
+/*stile per le immagini
+.amb img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+
+}
