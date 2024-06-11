@@ -1,16 +1,15 @@
 document.addEventListener("DOMContentLoaded", function() {
     const domande = [
-        { domanda: "Indicazioni tappa 1 - ALBANIA: ...", rispostaCorretta: "spaghetti", immagine: "immagini/albania.svg" },
-        { domanda: "Indicazioni tappa 2 - BOSNIA ERZEGOVINA: ...", rispostaCorretta: "pizza", immagine: "immagini/bosnia.svg" },
-        { domanda: "Indicazioni tappa 3 - BULGARIA: ...", rispostaCorretta: "lasagne", immagine: "immagini/bulgaria.svg" },
-        { domanda: "Indicazioni tappa 4 - GHANA: ...", rispostaCorretta: "gnocchi", immagine: "immagini/ghana.svg" },
-        { domanda: "Indicazioni tappa 5 - INDIA: ...", rispostaCorretta: "tortellini", immagine: "immagini/india.svg" },
-        { domanda: "Indicazioni tappa 6 - ITALIA: ...", rispostaCorretta: "pappardelle", immagine: "immagini/italia.svg" },
-        { domanda: "Indicazioni tappa 7 - MACEDONIA: ...", rispostaCorretta: "gelato", immagine: "immagini/macedonia.svg" },
-        { domanda: "Indicazioni tappa 8 - MAROCCO: ...", rispostaCorretta: "casoncelli", immagine: "immagini/marocco.svg" }
+        { domanda: "Indicazioni tappa 9 - PAKISTAN: ...", rispostaCorretta: "arrosto", immagine: "immagini/pakistan.svg" },
+        { domanda: "Indicazioni tappa 10 - ROMANIA: ...", rispostaCorretta: "tiramisu", immagine: "immagini/romania.svg" },
+        { domanda: "Indicazioni tappa 11 - SENEGAL: ...", rispostaCorretta: "meringata", immagine: "immagini/senegal.svg" },
+        { domanda: "Indicazioni tappa 12 - TUNISIA: ...", rispostaCorretta: "pastiera", immagine: "immagini/tunisia.svg" },
+        { domanda: "Indicazioni tappa 13 - UCRAINA: ...", rispostaCorretta: "cannoli", immagine: "immagini/ucraina.svg" },
+        { domanda: "Indicazioni tappa 14 - SPAGNA: ...", rispostaCorretta: "sorbetto", immagine: "immagini/spagna.svg" },
+        { domanda: "Indicazioni tappa 15 - BRASILE: ...", rispostaCorretta: "crostata", immagine: "immagini/brasile.svg" }
     ];
 
-    const squadra = parseInt(document.body.getAttribute('data-squadra'), 8);
+    const squadra = parseInt(document.body.getAttribute('data-squadra'), 7);
     const domandeContainer = document.getElementById("domande-container");
     const timbroContainer = document.getElementById("timbro-container");
     const progressBar = document.getElementById("progress-bar");
