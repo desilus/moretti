@@ -178,7 +178,7 @@ header h1, footer h1 {
     body {
         grid-template-rows: auto 1fr auto;
         gap: 10px;
-        scale: 0.9;
+        scale: 0.7;
     }
 
     header, footer {
