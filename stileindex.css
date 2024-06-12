@@ -3,10 +3,10 @@
 :root {
     --background-rgb: 15 15 15;
     
-    --blue-rgb: 255 127 80;
-    --primary-rgb: var(--blue-rgb);
+    --orange-rgb: 255 127 80;
+    --primary-rgb: var(--orange-rgb);
     
-    --blob-color-1: rgb(var(--blue-rgb));
+    --blob-color-1: rgb(var(--orange-rgb));
     --blob-color-2: dodgerblue;
   }
   
@@ -91,12 +91,12 @@
   @keyframes pan-image {  
     0% {
         background-position: 36% 42%;
-        background-size: 400%;
+        background-size: 300%;
       }
       
       20% {
         background-position: 30% 35%;
-        background-size: 400%;
+        background-size: 300%;
       }
     
     
@@ -284,15 +284,17 @@
   
   #links {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     gap: 0.5rem;
     position: absolute;
     top: 0px;
-    left: -70px;
+    left: -25px;
     z-index: 20;
     padding: 1rem;
     border: 1px solid red;
     border-radius: 10px;
+    background-color: rgb(177, 117, 62);
+    opacity: 0.8;
     
     
   }
@@ -320,7 +322,7 @@
   }
   
   .meta-link > a.source {
-    color: rgb(150, 210, 94);
+    color: rgb(7, 7, 6);
   }
   
   .meta-link > a:is(:hover, :focus) > i {
