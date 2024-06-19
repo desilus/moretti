@@ -1,13 +1,13 @@
 document.addEventListener("DOMContentLoaded", function() {
     const domande = [
-        { domanda: "Indicazioni tappa 1 - ALBANIA: ...", rispostaCorretta: "spaghetti", immagine: "immagini/albania.svg" },
-        { domanda: "Indicazioni tappa 2 - BOSNIA ERZEGOVINA: ...", rispostaCorretta: "pizza", immagine: "immagini/bosnia.svg" },
-        { domanda: "Indicazioni tappa 3 - BULGARIA: ...", rispostaCorretta: "lasagne", immagine: "immagini/bulgaria.svg" },
-        { domanda: "Indicazioni tappa 4 - GHANA: ...", rispostaCorretta: "gnocchi", immagine: "immagini/ghana.svg" },
-        { domanda: "Indicazioni tappa 5 - INDIA: ...", rispostaCorretta: "tortellini", immagine: "immagini/india.svg" },
-        { domanda: "Indicazioni tappa 6 - ITALIA: ...", rispostaCorretta: "pappardelle", immagine: "immagini/italia.svg" },
-        { domanda: "Indicazioni tappa 7 - MACEDONIA: ...", rispostaCorretta: "gelato", immagine: "immagini/macedonia.svg" },
-        { domanda: "Indicazioni tappa 8 - MAROCCO: ...", rispostaCorretta: "casoncelli", immagine: "immagini/marocco.svg" }
+        { domanda: "RECATI SUBITO ALLA TAPPA NUMERO 1. Benvenuti in ALBANIA! Per superare questa tappa e fare tanti punti segui attentamente le indicazioni dello staff!", rispostaCorretta: "spaghetti", immagine: "immagini/albania.svg" },
+        { domanda: "VAI ALLA TAPPA 2! Benvenuti in BOSNIA! Per superare questa tappa e fare tanti punti segui attentamente le indicazioni dello staff!", rispostaCorretta: "pizza", immagine: "immagini/bosnia.svg" },
+        { domanda: "VOLA ALLA TAPPA 3! Benvenuti in BULGARIA! Ascolta bene lo staff!", rispostaCorretta: "lasagne", immagine: "immagini/bulgaria.svg" },
+        { domanda: "VAI ALLA TAPPA 4! Benvenuti in GHANA! Ascolta bene lo staff!", rispostaCorretta: "gnocchi", immagine: "immagini/ghana.svg" },
+        { domanda: "VAI ALLA TAPPA 5. Benvenuti in INDIA! Sui tavolini troverai un cruciverba. Una volto risolto avrai la parola d’ordine!", rispostaCorretta: "casoncelli", immagine: "immagini/india.svg" },
+        { domanda: "VAI ALLA TAPPA 6. Benvenuti in ITALIA, la patria del vino! Entra in cantina ed ascolta lo staff!", rispostaCorretta: "pappardelle", immagine: "immagini/italia.svg" },
+        { domanda: "VIA LIBERA PER LA TAPPA 7! Benvenuti in MACEDONIA! Leggi le istruzioni attentamente e avrai la parola d’ordine", rispostaCorretta: "gelato", immagine: "immagini/macedonia.svg" },
+        { domanda: "VAI ALLA TAPPA 8! Benvenuti in MAROCCO. Leggete le istruzioni attentamente per la parola d’ordine!", rispostaCorretta: "tortellini", immagine: "immagini/marocco.svg" }
     ];
 
     const squadra = parseInt(document.body.getAttribute('data-squadra'), 8);
@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function() {
         div.innerHTML = `
             <label for="domanda${index + 1}">${domandaObj.domanda}</label>
             <div class="cici"></div>
-            <p>CODICE</p>
+            <p>PAROLA D'ORDINE</p>
             <input type="text" class="domandaDinamica" id="domanda${index + 1}" name="domanda${index + 1}">
         `;
         domandeContainer.insertBefore(div, document.getElementById("pagina-commiato"));

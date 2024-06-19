@@ -1,12 +1,12 @@
 document.addEventListener("DOMContentLoaded", function() {
     const domande = [
-        { domanda: "Indicazioni tappa 9 - PAKISTAN: ...", rispostaCorretta: "arrosto", immagine: "immagini/pakistan.svg" },
-        { domanda: "Indicazioni tappa 10 - ROMANIA: ...", rispostaCorretta: "tiramisu", immagine: "immagini/romania.svg" },
-        { domanda: "Indicazioni tappa 11 - SENEGAL: ...", rispostaCorretta: "meringata", immagine: "immagini/senegal.svg" },
-        { domanda: "Indicazioni tappa 12 - TUNISIA: ...", rispostaCorretta: "pastiera", immagine: "immagini/tunisia.svg" },
-        { domanda: "Indicazioni tappa 13 - UCRAINA: ...", rispostaCorretta: "cannoli", immagine: "immagini/ucraina.svg" },
-        { domanda: "Indicazioni tappa 14 - SPAGNA: ...", rispostaCorretta: "sorbetto", immagine: "immagini/spagna.svg" },
-        { domanda: "Indicazioni tappa 15 - BRASILE: ...", rispostaCorretta: "crostata", immagine: "immagini/brasile.svg" }
+        { domanda: "RECATI SUBITO ALLA TAPPA NUMERO 9. Benvenuti in PAKISTAN! Per superare questa tappa e fare tanti punti segui attentamente le indicazioni dello staff!", rispostaCorretta: "arrosto", immagine: "immagini/pakistan.svg" },
+        { domanda: "VAI ALLA TAPPA 10! Benvenuti IN ROMANIA! Leggi le istruzioni attentamente e avrai la parola d’ordine", rispostaCorretta: "tiramisu", immagine: "immagini/romania.svg" },
+        { domanda: "VOLA ALLA TAPPA 11! Benvenuti in SENEGAL! Ascolta bene lo staff!", rispostaCorretta: "meringata", immagine: "immagini/senegal.svg" },
+        { domanda: "VAI ALLA TAPPA 12. Benvenuti in TUNISIA! Ascolta bene lo staff!", rispostaCorretta: "pastiera", immagine: "immagini/tunisia.svg" },
+        { domanda: "VAI ALLA TAPPA 13. Benvenuti in UCRAINA! Sui tavolini troverai un cruciverba. Una volto risolto avrai la parola d’ordine!", rispostaCorretta: "cannoli", immagine: "immagini/ucraina.svg" },
+        { domanda: "VAI ALLA TAPPA 14. Benvenuti in SPAGNA! Ascolta lo staff per procedere", rispostaCorretta: "sorbetto", immagine: "immagini/spagna.svg" },
+        { domanda: "VIA LIBERA PER LA TAPPA 15! Benvenuti in BRASILE! Leggi le istruzioni attentamente e avrai la parola d’ordine", rispostaCorretta: "crostata", immagine: "immagini/brasile.svg" }
     ];
 
     const squadra = parseInt(document.body.getAttribute('data-squadra'), 7);
@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function() {
         div.innerHTML = `
             <label for="domanda${index + 1}">${domandaObj.domanda}</label>
             <div class="cici"></div>
-            <p>CODICE</p>
+            <p>PAROLA D'ORDINE</p>
             <input type="text" class="domandaDinamica" id="domanda${index + 1}" name="domanda${index + 1}">
         `;
         domandeContainer.insertBefore(div, document.getElementById("pagina-commiato"));
