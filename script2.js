@@ -2,9 +2,9 @@ document.addEventListener("DOMContentLoaded", function() {
     const domande = [
         { domanda: "RECATI SUBITO ALLA TAPPA NUMERO 9. Benvenuti in PAKISTAN! Per superare questa tappa e fare tanti punti segui attentamente le indicazioni dello staff!", rispostaCorretta: "arrosto", immagine: "immagini/pakistan.svg" },
         { domanda: "VAI ALLA TAPPA 10! Benvenuti IN ROMANIA! Leggi le istruzioni attentamente e avrai la parola d’ordine", rispostaCorretta: "tiramisu", immagine: "immagini/romania.svg" },
-        { domanda: "VOLA ALLA TAPPA 11! Benvenuti in SENEGAL! Ascolta bene lo staff!", rispostaCorretta: "meringata", immagine: "immagini/senegal.svg" },
+        { domanda: "VOLA ALLA TAPPA 11! Benvenuti in SENEGAL! Sui tavolini troverai un cruciverba. Una volto risolto avrai la parola d’ordine!", rispostaCorretta: "meringata", immagine: "immagini/senegal.svg" },
         { domanda: "VAI ALLA TAPPA 12. Benvenuti in TUNISIA! Ascolta bene lo staff!", rispostaCorretta: "pastiera", immagine: "immagini/tunisia.svg" },
-        { domanda: "VAI ALLA TAPPA 13. Benvenuti in UCRAINA! Sui tavolini troverai un cruciverba. Una volto risolto avrai la parola d’ordine!", rispostaCorretta: "cannoli", immagine: "immagini/ucraina.svg" },
+        { domanda: "VAI ALLA TAPPA 13. Benvenuti in UCRAINA! Ascolta bene lo staff!", rispostaCorretta: "cannoli", immagine: "immagini/ucraina.svg" },
         { domanda: "VAI ALLA TAPPA 14. Benvenuti in SPAGNA! Ascolta lo staff per procedere", rispostaCorretta: "sorbetto", immagine: "immagini/spagna.svg" },
         { domanda: "VIA LIBERA PER LA TAPPA 15! Benvenuti in BRASILE! Leggi le istruzioni attentamente e avrai la parola d’ordine", rispostaCorretta: "crostata", immagine: "immagini/brasile.svg" }
     ];
