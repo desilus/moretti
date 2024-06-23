@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
         { domanda: "VOLA ALLA TAPPA 3! Benvenuti in BULGARIA! Ascolta bene lo staff!", rispostaCorretta: "lasagne", immagine: "immagini/bulgaria.svg" },
         { domanda: "VAI ALLA TAPPA 4! Benvenuti in GHANA! Sui tavolini troverai un cruciverba. Una volto risolto avrai la parola d’ordine!", rispostaCorretta: "casoncelli", immagine: "immagini/ghana.svg" },
         { domanda: "VAI ALLA TAPPA 5. Benvenuti in INDIA! Ascolta bene lo staff!", rispostaCorretta: "gnocchi", immagine: "immagini/india.svg" },
-        { domanda: "VAI ALLA TAPPA 6. Benvenuti in ITALIA, leggi le istruzioni attentamente e avrai la parola d’ordine. Insieme alla squadra create un video e mandatecelo al seguente indirizzo test@testone.testina", rispostaCorretta: "pappardelle", immagine: "immagini/italia.svg" },
+        { domanda: "VAI ALLA TAPPA 6. Benvenuti in ITALIA, leggi le istruzioni attentamente e avrai la parola d’ordine.", rispostaCorretta: "pappardelle", immagine: "immagini/italia.svg" },
         { domanda: "VIA LIBERA PER LA TAPPA 7! Benvenuti in MACEDONIA! Entra in cantina ed ascolta lo staff!", rispostaCorretta: "gelato", immagine: "immagini/macedonia.svg" },
         { domanda: "VAI ALLA TAPPA 8! Benvenuti in MAROCCO. Leggete le istruzioni attentamente per la parola d’ordine!", rispostaCorretta: "tortellini", immagine: "immagini/marocco.svg" }
     ];
