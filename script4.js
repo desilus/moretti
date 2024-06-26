@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
         { domanda: "VIA LIBERA PER LA TAPPA 15! Benvenuti in BRASILE! Leggi le istruzioni attentamente e avrai la parola d’ordine", rispostaCorretta: "crostata", immagine: "immagini/brasile.svg" }
     ];
 
-    const squadra = parseInt(document.body.getAttribute('data-squadra'), 7);
+    const squadra = parseInt(document.body.getAttribute('data-squadra'), 8);
     const domandeContainer = document.getElementById("domande-container");
     const timbroContainer = document.getElementById("timbro-container");
     const progressBar = document.getElementById("progress-bar");
